@@ -7,27 +7,60 @@
 // con difficoltà 2 => tra 1 e 81
 // con difficoltà 3 => tra 1 e 49
 
-//generazione della griglia di gioco 
+
+//Bottone di click per inizializzare il gioco
+
+document.getElementById("btn-play").addEventListener("click",
+
+    //generazione della funzione per i bonus 
+    function() {
+
+        const cellUndred = document.querySelector(".grid-container");
+        const level = document.getElementById("level").value;
+        console.log(level);
+
+        let numberBox = 0;
+        switch (level) {
+            case 'easy':
+                numberBox = 100;
+                break;
+            case 'medium':
+                numberBox = 81;
+                break;
+            case 'hard':
+                numberBox = 49;
+                break;
+        }
+        for (let i = 1; i <= numberBox; i++) {
+            let cellGrid;
+            cellGrid = i;
+
+            const singleCell = document.createElement("div");
+            singleCell.innerHTML += `${cellGrid}`;
+
+            singleCell.classList.add("cell-grid");
+            console.log(singleCell);
+
+            switch (cellGrid) {
+                case 'easy':
+                    singleCell.classList.add("cell-grid");
+                    break;
+                case 'medium':
+                    singleCell.classList.add("cell-grid-m");
+                    break;
+                case 'hard':
+                    singleCell.classList.add("cell-grid-h");
+                    break;
+            }
+
+            singleCell.addEventListener("click", function() {
+                this.classList.add("cell-active");
+                console.log(this);
+            });
+            cellUndred.append(singleCell);
+        }
+    }
 
 
 
-const cellUndred = document.querySelector(".grid-container");
-
-
-for (let i = 1; i <= 100; i++) {
-    let cellGrid;
-    cellGrid = i;
-
-    const singleCell = document.createElement("div");
-    singleCell.innerHTML += `${cellGrid}`;
-
-    singleCell.classList.add("cell-grid");
-    console.log(singleCell);
-
-    singleCell.addEventListener("click", function() {
-        this.classList.add("cell-active");
-        console.log(this);
-    });
-    cellUndred.append(singleCell);
-}
-// const singleCell = document.querySelector(".cell-grid");
+);

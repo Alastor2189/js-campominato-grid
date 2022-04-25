@@ -62,11 +62,32 @@ main {
     height: 550px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .cell-grid {
     width: calc(100% / 10);
     height: calc(100% / 10);
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-grid-m {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-grid-h {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
     border: 1px solid black;
     color: black;
     display: flex;
