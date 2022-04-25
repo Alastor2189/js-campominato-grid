@@ -16,6 +16,7 @@ document.getElementById("btn-play").addEventListener("click",
     function() {
 
         const cellUndred = document.querySelector(".grid-container");
+        cellUndred.innerHTML = "";
         const level = document.getElementById("level").value;
         console.log(level);
 
@@ -41,7 +42,7 @@ document.getElementById("btn-play").addEventListener("click",
             singleCell.classList.add("cell-grid");
             console.log(singleCell);
 
-            switch (cellGrid) {
+            switch (level) {
                 case 'easy':
                     singleCell.classList.add("cell-grid");
                     break;
