@@ -14,3 +14,18 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
+.cell-grid {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-active {
+    background-color: #6495ed;
+    color: white;
+}

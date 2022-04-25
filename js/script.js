@@ -7,5 +7,25 @@
 // con difficoltà 2 => tra 1 e 81
 // con difficoltà 3 => tra 1 e 49
 
+//generazione della griglia di gioco 
 
-// creazione del bottone per inizializzare il gioco
+const cellUndred = document.querySelector(".grid-container");
+
+
+for (let i = 1; i <= 100; i++) {
+    let cellGrid;
+    cellGrid = i;
+
+    const singleCell = document.createElement("div");
+    singleCell.innerHTML += `${cellGrid}`;
+
+    singleCell.classList.add("cell-grid");
+    console.log(singleCell);
+
+    singleCell.addEventListener("click", function() {
+        this.classList.add("cell-active");
+        console.log(this);
+    });
+    cellUndred.append(singleCell);
+}
+// const singleCell = document.querySelector(".cell-grid");
