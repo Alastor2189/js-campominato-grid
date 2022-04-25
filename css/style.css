@@ -4,13 +4,62 @@
     box-sizing: border-box;
 }
 
+
+/* HEADER */
+
+header {
+    height: 100px;
+}
+
+.contain {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding: 3px 0;
+}
+
+.logo img {
+    width: 30%;
+    height: 90px;
+}
+
+.difficult {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#level {
+    background-color: white;
+    width: 120px;
+}
+
+#btn-play {
+    width: 60px;
+}
+
+
+/* MAIN */
+
 main {
     background-color: #7fffd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .grid-container {
-    width: 800px;
-    height: 800px;
+    width: 550px;
+    height: 550px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -28,4 +77,17 @@ main {
 .cell-active {
     background-color: #6495ed;
     color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 50px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }

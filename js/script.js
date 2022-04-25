@@ -9,6 +9,8 @@
 
 //generazione della griglia di gioco 
 
+
+
 const cellUndred = document.querySelector(".grid-container");
 
 
